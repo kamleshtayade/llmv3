@@ -10,5 +10,5 @@ Using CPython 3.11.9 interpreter at: /Users/kamlesh/.pyenv/versions/3.11.9/bin/p
 
 Activate env with: 
 ```bash
-source env/bin/activate
+source .venv/bin/activate
 ```

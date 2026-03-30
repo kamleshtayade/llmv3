@@ -6,8 +6,12 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = []
 
+[project.scripts]
+llmv3 = "llmv3.main:main"
+fastapi_feeder = "fastapi_feeder.main:main"
+
 [tool.uv.sources]
-fastApi-feeder = { workspace = true }
+fastapi_feeder = { workspace = true }
 
 [tool.uv.workspace]
 members = ["packages/*"]
