@@ -1,5 +1,5 @@
 def main():
-    print("Hello from fastapi_feeder!")
+    print("Hello from fastapi_feeder! fastapi")
 
 
 if __name__ == "__main__":
