@@ -1,3 +1,27 @@
+# fastapi_feeder
+
+Running locally
+-----------------
+
+The feeder exposes a FastAPI app and serves OpenAPI-based UIs when run with uvicorn.
+
+Use the workspace runner to ensure dependencies from `pyproject.toml` are available:
+
+```
+uv run fastapi_feeder
+```
+
+Once started, the interactive documentation (Swagger UI) is available at:
+
+- Swagger UI: http://127.0.0.1:8000/docs
+- ReDoc: http://127.0.0.1:8000/redoc
+
+If you prefer to run directly with Python/uvicorn, ensure you have `uvicorn` installed and run:
+
+```
+python -m uvicorn fastapi_feeder.main:app --reload
+```
+
 ## fastapi_feeder — development
 
 This document shows how to run the `fastapi_feeder` package individually for development using the repository `.venv`.

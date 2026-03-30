@@ -1,0 +1,15 @@
+# Consumer image: small Python runtime that runs the consumer script
+FROM python:3.11-slim
+WORKDIR /app
+
+# Copy only what's needed into the runtime image. Keep PYTHONPATH so imports work.
+COPY src/ ./src/
+COPY packages/fastapi_feeder/src/fastapi_feeder/ ./fastapi_feeder/
+
+# Install only runtime deps. requests is required by the consumer.
+RUN pip install --no-cache-dir requests==2.31.0
+
+ENV PYTHONPATH=/app
+
+# Run the HTTP consumer which calls the feeder service over the network
+CMD ["python", "-u", "src/llmv3/consumer_http.py"]

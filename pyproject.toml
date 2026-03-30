@@ -8,7 +8,7 @@ dependencies = []
 
 [project.scripts]
 llmv3 = "llmv3.main:main"
-fastapi_feeder = "fastapi_feeder.main:main"
+fastapi_feeder = "fastapi_feeder.main:serve"
 
 [tool.uv.sources]
 fastapi_feeder = { workspace = true }
