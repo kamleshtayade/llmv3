@@ -4,14 +4,14 @@ requires-python = ">=3.11"
 
 [manifest]
 members = [
-    "fastapi-feeder",
+    "fastapi_feeder",
     "llmv3",
 ]
 
 [[package]]
-name = "fastapi-feeder"
+name = "fastapi_feeder"
 version = "0.1.0"
-source = { editable = "packages/fastApi-feeder" }
+source = { editable = "packages/fastapi_feeder" }
 
 [[package]]
 name = "llmv3"
