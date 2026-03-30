@@ -1,5 +1,8 @@
 from fastapi import FastAPI, Request
 
+# Import the router that contains endpoint handlers.
+from .routes import router
+
 app = FastAPI()
 
 
@@ -14,17 +17,11 @@ async def add_custom_header(request: Request, call_next):
     return response
 
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+# Include application routes from the `routes` module. Keeping a flat
+# `main.py` that only wires the app makes the code follow single-responsibility
+# principles and eases testing.
+app.include_router(router)
 
-@app.get("/users")
-async def read_users():
-    return ["Rick", "Morty"]
-
-@app.get("/users")
-async def read_users2():
-    return ["Bean", "Elfo"]
 
 def main():
     # Simple CLI entrypoint for manual testing if desired
