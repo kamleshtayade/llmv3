@@ -9,4 +9,11 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = []
-packages = ["fastapi_feeder"]
+
+# Use setuptools package discovery for src-layout
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
