@@ -2,7 +2,18 @@ version = 1
 revision = 3
 requires-python = ">=3.11"
 
+[manifest]
+members = [
+    "fastapi-feeder",
+    "llmv3",
+]
+
+[[package]]
+name = "fastapi-feeder"
+version = "0.1.0"
+source = { editable = "packages/fastApi-feeder" }
+
 [[package]]
 name = "llmv3"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
